@@ -47,6 +47,9 @@ export default class Logger implements ILogger {
 
   @checkEnabled(LogLevel.Error)
   public error(...args: any[]): void {
+    if (args[0] instanceof Error) {
+      args[0] = args[0].stack
+    }
     alt.logError(`[${this.name}]`, ...args)
   }
 }
