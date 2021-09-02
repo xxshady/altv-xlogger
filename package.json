@@ -2,7 +2,7 @@
   "name": "altv-xlogger",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "dependencies": {
     "reflect-metadata": "^0.1.13",
