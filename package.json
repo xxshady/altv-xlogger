@@ -2,14 +2,11 @@
   "name": "altv-xlogger",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "type": "module",
-  "dependencies": {
-    "reflect-metadata": "^0.1.13",
-    "typescript": "^4.4.2"
-  },
   "devDependencies": {
-    "@altv/types-shared": "^1.0.2"
+    "@altv/types-shared": "^1.0.2",
+    "typescript": "^4.4.2"
   },
   "homepage": "https://github.com/xxshady/altv-xlogger",
   "files": [
