@@ -7,6 +7,7 @@ export interface ILogger {
   log(...args: any[]): void
   error(...args: any[]): void
   warn(...args: any[]): void
+  moreInfo(...args: any[]): void
 }
 
 export interface IOptions {
