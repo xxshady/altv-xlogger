@@ -32,7 +32,14 @@ export class Logger {
 
   @checkEnabled("info")
   public info(...args: any[]): void {
-    alt.log(`${Logger.startLogColor}[${this.name}]~w~`, ...args)
+    this._info(args)
+  }
+
+  /**
+   * Is the same as {@link info}, except it doesn't checks for {@link logLevel}
+   */
+  public infoUnchecked(...args: any[]): void {
+    this._info(args)
   }
 
   @checkEnabled("warn")
@@ -46,5 +53,9 @@ export class Logger {
       args[0] = args[0].stack
     }
     alt.logError(`[${this.name}]`, ...args)
+  }
+
+  private _info (args: any[]): void {
+    alt.log(`${Logger.startLogColor}[${this.name}]~w~`, ...args)
   }
 }
