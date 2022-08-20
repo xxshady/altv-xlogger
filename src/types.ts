@@ -1,16 +1,6 @@
-import type { LogLevel } from './enums'
-
-export interface ILogger {
-  name: string
-  enabled: boolean
-  logLevel: LogLevel
-  log(...args: any[]): void
-  error(...args: any[]): void
-  warn(...args: any[]): void
-  moreInfo(...args: any[]): void
-}
+export type LogLevel = "info" | "warn" | "error"
 
 export interface IOptions {
-  enabled?: ILogger['enabled']
-  logLevel?: ILogger['logLevel']
+  enabled?: boolean
+  logLevel?: LogLevel
 }

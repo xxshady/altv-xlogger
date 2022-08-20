@@ -1,3 +1,3 @@
-export { default as createLogger } from './create'
-export { LogLevel } from './enums'
-export type { ILogger, IOptions } from './types'
+export { createLogger } from './create'
+export type { IOptions, LogLevel } from './types'
+export { Logger } from './class'
