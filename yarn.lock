@@ -2,17 +2,12 @@
 # yarn lockfile v1
 
 
-"@altv/types-shared@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@altv/types-shared/-/types-shared-1.0.2.tgz#c9b3b4964bb8c690883a243f8fbefaeb574b520f"
-  integrity sha512-yxJh6u4jFjyrZsFOe2Fx7352e8WO+k/YxXHcSktBc3Zq5suIDhaMIk6dy7K+pYHKDlPa0DNzPnnjcq3QUYK6Qw==
+"@altv/types-shared@^1.2.8":
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@altv/types-shared/-/types-shared-1.2.8.tgz#4e9dbee0ea856674c4e4aa799a938a0d540f4a09"
+  integrity sha512-JUN4hyuSSdbeUrfkPag+9p0HHZCJXUiHqpliAoqbSpGf0lxqlH9YJBmlkKrgYb5Hc1KmUruXljh1Xay8wOy9+Q==
 
-reflect-metadata@^0.1.13:
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
-  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
-
-typescript@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
-  integrity sha512-gzP+t5W4hdy4c+68bfcv0t400HVJMMd2+H9B7gae1nQlBzCqvrXX+6GL/b3GAgyTH966pzrZ70/fRjwAtZksSQ==
+typescript@^4.7.4:
+  version "4.7.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.4.tgz#1a88596d1cf47d59507a1bcdfb5b9dfe4d488235"
+  integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
