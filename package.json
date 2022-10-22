@@ -5,7 +5,7 @@
   "version": "2.1.0",
   "type": "module",
   "devDependencies": {
-    "@altv/types-shared": "^1.2.8",
+    "@altv/types-shared": "^1.3.1",
     "typescript": "^4.7.4"
   },
   "homepage": "https://github.com/xxshady/altv-xlogger",
@@ -14,5 +14,8 @@
   ],
   "scripts": {
     "publ": "tsc && yarn publish"
+  },
+  "dependencies": {
+    "@altv/types-server": "^2.5.0"
   }
 }

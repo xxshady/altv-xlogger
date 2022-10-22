@@ -1,12 +1,34 @@
-import alt from 'alt-shared'
 import { checkEnabled } from './decorators'
 import type { IOptions, LogLevel } from './types'
+
+declare const global: unknown
 
 export class Logger {
   /**
    * rgb color: (0, 255, 255)
    */
   public static readonly startLogColor = '~cl~'
+
+  private static logColored = typeof global === 'undefined' && typeof window === 'undefined'
+
+  private static logInfo = console.log
+  private static logWarn = console.warn
+  private static logError = console.error
+
+  static {
+    // are we in nodejs environment?
+    if (typeof global !== 'undefined') {
+      import("alt-server")
+        .then((alt) => {
+          Logger.logInfo = alt.log
+          Logger.logWarn = alt.logWarning
+          Logger.logError = alt.logError
+        })
+        .catch(e => {
+          console.error("altv-xlogger: failed to import alt-server")
+        })
+    }
+  }
 
   public name: string
   public enabled = true
@@ -44,7 +66,7 @@ export class Logger {
 
   @checkEnabled("warn")
   public warn(...args: any[]): void {
-    alt.logWarning(`[${this.name}]`, ...args)
+    Logger.logWarn(`[${this.name}]`, ...args)
   }
 
   @checkEnabled("error")
@@ -52,10 +74,13 @@ export class Logger {
     if (args[0] instanceof Error) {
       args[0] = args[0].stack
     }
-    alt.logError(`[${this.name}]`, ...args)
+    Logger.logError(`[${this.name}]`, ...args)
   }
 
   private _info (args: any[]): void {
-    alt.log(`${Logger.startLogColor}[${this.name}]~w~`, ...args)
+    if (Logger.logColored)
+      Logger.logInfo(`${Logger.startLogColor}[${this.name}]~w~`, ...args)
+    else
+      Logger.logInfo(...args)
   }
 }
