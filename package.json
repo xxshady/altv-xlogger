@@ -2,7 +2,7 @@
   "name": "altv-xlogger",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "type": "module",
   "devDependencies": {
     "@altv/types-shared": "^1.2.8",
